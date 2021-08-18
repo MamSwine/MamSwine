@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int m1,m2;
+    int over;
+    int x,y,z;
+
+    cin >> x >> y >> z;
+    cout << "aaa" << endl;
+
+    int a,b,c;
+    int d,e,f;
+    int i = 0;
+
+    while(1){
+        for(m1 = 4; m1 <= 16; m1++){ // max of mixer size is 16
+            if( m1 % 2 == 1) continue; // mixer size is 2n, over 4
+
+            for(a = 0; a<= m1; a++){ // search a,b,c
+            for(b = 0; b<= m1; b++){
+            for(c = 0; c<= m1; c++){
+
+                /*if(a + b + c == m1 && a == x && b == y && c == z){
+                    cout << "dekita" << endl;
+                    cout << a << b << c <<endl;
+                    cout << m1 << endl;
+                } */
+
+                if(a + b + c ==m1){ // loop exprosion
+                    for(m2 = 4; m2 <= 16; m2++){ // max of mixer size is 16
+
+                        //cout <<"aab"<<endl;
+                    
+                        if( m2 % 2 == 1) continue; // mixer size is 2n, over 4
+                        
+                        for(over = 1; over <= m1 - 1; over++){
+                            for(d = 0; d <= m2; d++){
+                            for(e = 0; e <= m2; e++){
+                            for(f = 0; f <= m2; f++){
+                                if(d + e + f + over == m2 && a + (m1/over) * d == x && b + (m1/over) * e == y && c + (m1/over) * f == z){
+                                    cout << "dekita" << i << endl;
+                                    cout << a << b << c << d << e <<  f << endl;
+                                    cout << m1 << m2 << over << endl;
+                                    i++;
+                                }
+                            }
+                            }   
+                            }
+                        }
+                        
+                    }
+                    //cout << a << b << c <<endl;
+                }
+            }
+            }   
+            }
+        }
+        break;
+    }
+return 0;
+}
+
+/*if(a == x && b == y && c == z){
+    cout << "dekita" << endl;
+    cout << a << b << c <<endl;
+    cout << m1 << endl;
+} */
+
+<!---
+MamSwine/MamSwine is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
