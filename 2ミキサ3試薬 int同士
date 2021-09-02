@@ -71,4 +71,7 @@ return 0;
 <!---
 MamSwine/MamSwine is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
+ミキサ2個 サイズ4以上16以下の偶数
+目的比率3個
+42行目の割り算の処理をint型同士で行っているため小数点以下が切り捨てられ間違った解が出る可能性
 --->
